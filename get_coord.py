@@ -17,7 +17,7 @@ def mouse_callback(event, x, y, flags, param):
 cv2.namedWindow('original')
 cv2.setMouseCallback('original', mouse_callback)
 
-img_original = cv2.imread('./img/book.png')
+img_original = cv2.imread('./image/book.png')
 
 while True:
     cv2.imshow("original", img_original)
