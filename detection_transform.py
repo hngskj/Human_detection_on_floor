@@ -167,8 +167,10 @@ while True:
 
     if writer1 is None and writer2 is None:
         fourcc = cv2.VideoWriter_fourcc(*"MJPG")
-        writer1 = cv2.VideoWriter('output/{}_detect.avi'.format(filename), fourcc, 30, (frame.shape[1], frame.shape[0]), True)
-        writer2 = cv2.VideoWriter('output/{}_transform.avi'.format(filename), fourcc, 30, (frame.shape[1], frame.shape[0]), True)
+        writer1 = cv2.VideoWriter('output/{}_detect.avi'.format(filename), fourcc,
+                                  30, (frame.shape[1], frame.shape[0]), True)
+        writer2 = cv2.VideoWriter('output/{}_transform.avi'.format(filename), fourcc,
+                                  30, (transformed_frame.shape[1], transformed_frame.shape[0]), True)
 
         if total > 0:
             elap = (end - start)
