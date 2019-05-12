@@ -51,6 +51,7 @@ vs = cv2.VideoCapture(args["input"])
 writer = None
 W = int(vs.get(cv2.CAP_PROP_FRAME_WIDTH))
 H = int(vs.get(cv2.CAP_PROP_FRAME_HEIGHT))
+print("W, H:", W, H)
 
 # WRITE THE FIRST FRAME
 success, image = vs.read()
@@ -121,31 +122,47 @@ while True:
                 box = detection[0:4] * np.array([W, H, W, H])
                 (centerX, centerY, width, height) = box.astype("int")
 
-                x = int(centerX - (width / 2))
-                y = int(centerY - (height / 2))
+                # x = int(centerX - (width / 2))
+                # y = int(centerY - (height / 2))
+
+                x1 = int(centerX - (width / 2))
+                y1 = int(centerY - (height / 2))
+                x2 = int(centerX + (width / 2))
+                y2 = int(centerY + (height / 2))
 
                 if LABELS[classID] == 'person':
-                    boxes.append([x, y, int(width), int(height)])
+                    # boxes.append([x, y, int(width), int(height)])
+                    boxes.append([x1, y1, x2, y2])
                     confidences.append(float(confidence))
                     classIDs.append(classID)
 
     idxs = cv2.dnn.NMSBoxes(boxes, confidences, args["confidence"], args["threshold"])
 
+    transformed_frame = cv2.warpPerspective(frame, M, (W, H))
+
     if len(idxs) > 0:
         for i in idxs.flatten():
-            (x, y) = (boxes[i][0], boxes[i][1])
-            (w, h) = (boxes[i][2], boxes[i][3])
-            x_center = int((x+x+w)/2)
-            y_bottom = y+h
+            (x1, y1) = (boxes[i][0], boxes[i][1])
+            (x2, y2) = (boxes[i][2], boxes[i][3])
+
+            original_1 = np.array([[[x1, y1]]], dtype='float32')
+            original_2 = np.array([[[x2, y2]]], dtype='float32')
+
+            transformed_1 = cv2.perspectiveTransform(original_1, HM)
+            transformed_2 = cv2.perspectiveTransform(original_2, HM)
+
+            t_x1, t_y1 = int(transformed_1[0][0][0]), int(transformed_1[0][0][1])
+            t_x2, t_y2 = int(transformed_2[0][0][0]), int(transformed_2[0][0][1])
+
+            x_center = int((t_x1+t_x2)/2)
+            y_bottom = t_y2
 
             color = [int(c) for c in COLORS[classIDs[i]]]
-            cv2.rectangle(frame, (x, y), (x + w, y + h), color, 2)
-            cv2.circle(frame, (x_center, y_bottom), 5, (0,0,255), -1)
+            cv2.rectangle(transformed_frame, (t_x1, t_y1), (t_x2, t_y2), color, 2)
+            cv2.circle(transformed_frame, (x_center, y_bottom), 5, (0,0,255), -1)
             text = "{}: {:.4f}".format(LABELS[classIDs[i]], confidences[i])
-            cv2.putText(frame, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+            cv2.putText(transformed_frame, text, (t_x1, t_y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
-    transformed_coord = cv2.perspectiveTransform(original_coord, HM)
-    transformed_frame = cv2.warpPerspective(frame, M, (W, H))
 
     if writer is None:
         fourcc = cv2.VideoWriter_fourcc(*"MJPG")
