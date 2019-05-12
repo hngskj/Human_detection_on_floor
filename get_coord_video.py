@@ -1,7 +1,4 @@
-from imutils.video import VideoStream
 from imutils.video import FPS
-import imutils
-import time
 import numpy as np
 import cv2
 
@@ -73,12 +70,12 @@ while True:
 
     if writer is None:
         fourcc = cv2.VideoWriter_fourcc(*"MJPG")
-        writer = cv2.VideoWriter('./output/{}.avi'.format(filename), fourcc,
+        writer = cv2.VideoWriter('./output/{}_perspective.avi'.format(filename), fourcc,
                                  30, (frame.shape[1], frame.shape[0]), True)
 
     # DO SOMETHING
     transformed_coord = cv2.perspectiveTransform(original_coord, H)
-    transformed_frame = cv2.warpPerspective(img_original, M, (width, height))
+    transformed_frame = cv2.warpPerspective(frame, M, (width, height))
 
 
     if writer is not None:
