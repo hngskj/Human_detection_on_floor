@@ -41,8 +41,6 @@ while True:
     if cv2.waitKey(1)&0xFF == 32:
         break
 
-
-
 print("point_list:",point_list)
 # coordinate order - upper left > upper right > lower left > lower right
 pts_src = np.float32([list(point_list[0]), list(point_list[1]), list(point_list[2]), list(point_list[3])])

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d8ca60b-0cdf-4590-969b-61c89102a1ad" name="Default Changelist" comment="let's move on to video">
+      <change afterPath="$PROJECT_DIR$/detection_transform.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/yolo-coco/yolov3-spp.weights" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/yolo-coco/yolov3.weights" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -33,12 +34,12 @@
         <state>
           <leaf>
             <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/get_coord_video.py">
+              <entry file="file://$PROJECT_DIR$/detection_transform.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="984">
-                    <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+                  <state relative-caret-position="3744">
+                    <caret line="156" column="57" selection-start-line="156" selection-start-column="57" selection-end-line="156" selection-end-column="57" />
                     <folding>
-                      <element signature="e#0#29#0" expanded="true" />
+                      <element signature="e#103#121#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -51,11 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/detection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="68" column="39" lean-forward="true" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+            <state relative-caret-position="-66">
+              <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
               <folding>
                 <element signature="e#103#121#0" expanded="true" />
               </folding>
@@ -66,17 +67,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../__Research/object-tracking-dlib/track_object.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="-72">
               <caret line="83" column="34" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/get_coord_image.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/get_coord_video.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="1104">
+              <caret line="75" column="14" lean-forward="true" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,6 +119,7 @@
         <option value="$PROJECT_DIR$/detection.py" />
         <option value="$PROJECT_DIR$/get_coord_image.py" />
         <option value="$PROJECT_DIR$/get_coord_video.py" />
+        <option value="$PROJECT_DIR$/detection_transform.py" />
       </list>
     </option>
   </component>
@@ -337,7 +342,7 @@
       <workItem from="1557040807197" duration="6000" />
       <workItem from="1557040832964" duration="14168000" />
       <workItem from="1557058274822" duration="603000" />
-      <workItem from="1557058912510" duration="17674000" />
+      <workItem from="1557058912510" duration="19536000" />
     </task>
     <task id="LOCAL-00001" summary="get coord on floor">
       <created>1557046713761</created>
@@ -409,11 +414,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557660896513</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="perspective transformation on video">
+      <created>1557661415481</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1557661415481</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32451000" />
+    <option name="totallyTimeSpent" value="34313000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -426,6 +438,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1088" y="-113" width="1096" height="1936" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16505791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -433,7 +446,7 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32901752" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.13540511" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.13540511" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -452,6 +465,32 @@
       <window_info anchor="right" id="SciView" order="5" />
       <window_info anchor="right" id="Database" order="6" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16505791" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32901752" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.13540511" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32963374" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50096524" side_tool="true" weight="0.23806882" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49903476" weight="0.23806882" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.17425083" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32963374" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
+      <window_info anchor="right" id="SciView" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -590,27 +629,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
+          <folding>
+            <element signature="e#103#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../__Research/object-tracking-dlib/track_object.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="-72">
           <caret line="83" column="34" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/get_coord_video.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="984">
-          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        <state relative-caret-position="1104">
+          <caret line="75" column="14" lean-forward="true" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detection.py">
+    <entry file="file://$PROJECT_DIR$/detection_transform.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="68" column="39" lean-forward="true" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+        <state relative-caret-position="3744">
+          <caret line="156" column="57" selection-start-line="156" selection-start-column="57" selection-end-line="156" selection-end-column="57" />
           <folding>
             <element signature="e#103#121#0" expanded="true" />
           </folding>
