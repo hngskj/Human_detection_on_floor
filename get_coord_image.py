@@ -21,7 +21,7 @@ img_original = cv2.imread('./images/book.png')
 
 while True:
     cv2.imshow("original", img_original)
-    height, weight = img_original.shape[:2]
+    height, width = img_original.shape[:2]
     # press SPACEBAR to break
     if cv2.waitKey(1)&0xFF == 32:
         break
@@ -30,7 +30,7 @@ print("point_list:",point_list)
 
 # coordinate order - upper left > upper right > lower left > lower right
 pts_src = np.float32([list(point_list[0]), list(point_list[1]), list(point_list[2]), list(point_list[3])])
-pts_dst = np.float32([[0,0], [weight,0], [0,height], [weight,height]])
+pts_dst = np.float32([[0,0], [width,0], [0,height], [width,height]])
 
 (x, y) = point_list[-1]
 _original_coord = np.array([[x, y]], dtype='float32')
@@ -41,7 +41,7 @@ M = cv2.getPerspectiveTransform(pts_src, pts_dst)
 H, status = cv2.findHomography(pts_src, pts_dst)
 
 transformed_coord = cv2.perspectiveTransform(original_coord, H)
-img_result = cv2.warpPerspective(img_original, M, (weight, height))
+img_result = cv2.warpPerspective(img_original, M, (width, height))
 
 print(pts_src)
 print("original_coord:", original_coord)
