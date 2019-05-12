@@ -10,8 +10,7 @@ import os
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--input", required=True, help="path to input video")
-ap.add_argument("-o", "--output", required=True, help="path to output video")
-ap.add_argument("-y", "--yolo", required=True, help="base path to YOLO directory")
+ap.add_argument("-y", "--yolo", default="yolo-coco", help="base path to YOLO directory")
 ap.add_argument("-c", "--confidence", type=float, default=0.5, help="minimum probability to filter weak detections")
 ap.add_argument("-t", "--threshold", type=float, default=0.3, help="threshold when applying non-maxima suppression")
 args = vars(ap.parse_args())
@@ -37,18 +36,14 @@ def mouse_callback(event, x, y, flags, param):
     global point_list, count, img_original
     if event == cv2.EVENT_LBUTTONDOWN:
         point_list.append((x, y))
-        if count < 4:
-            cv2.circle(img_original, (x, y), 3, (0, 0, 255), -1)
-        else:
-            cv2.circle(img_original, (x, y), 3, (0, 255, 0), -1)
-        count += 1
+        cv2.circle(img_original, (x, y), 3, (0, 0, 255), -1)
 
 
 filename = args["input"][7:-4]
 cv2.namedWindow('original')
 cv2.setMouseCallback('original', mouse_callback)
 vs = cv2.VideoCapture(args["input"])
-writer = None
+writer1, writer2 = None, None
 W = int(vs.get(cv2.CAP_PROP_FRAME_WIDTH))
 H = int(vs.get(cv2.CAP_PROP_FRAME_HEIGHT))
 print("W, H:", W, H)
@@ -71,6 +66,12 @@ print("point_list:",point_list)
 # coordinate order - upper left > upper right > lower left > lower right
 pts_src = np.float32([list(point_list[0]), list(point_list[1]), list(point_list[2]), list(point_list[3])])
 pts_dst = np.float32([[0,0], [W,0], [0,H], [W,H]])
+
+pts = [list(point_list[0]), list(point_list[1]), list(point_list[3]), list(point_list[2])]
+pts = np.array(pts)
+pts = pts.reshape((-1, 1, 2))
+space = np.int32(pts)
+
 
 (x, y) = point_list[-1]
 _original_coord = np.array([[x, y]], dtype='float32')
@@ -122,16 +123,12 @@ while True:
                 box = detection[0:4] * np.array([W, H, W, H])
                 (centerX, centerY, width, height) = box.astype("int")
 
-                # x = int(centerX - (width / 2))
-                # y = int(centerY - (height / 2))
-
                 x1 = int(centerX - (width / 2))
                 y1 = int(centerY - (height / 2))
                 x2 = int(centerX + (width / 2))
                 y2 = int(centerY + (height / 2))
 
                 if LABELS[classID] == 'person':
-                    # boxes.append([x, y, int(width), int(height)])
                     boxes.append([x1, y1, x2, y2])
                     confidences.append(float(confidence))
                     classIDs.append(classID)
@@ -154,28 +151,35 @@ while True:
             t_x1, t_y1 = int(transformed_1[0][0][0]), int(transformed_1[0][0][1])
             t_x2, t_y2 = int(transformed_2[0][0][0]), int(transformed_2[0][0][1])
 
-            x_center = int((t_x1+t_x2)/2)
-            y_bottom = t_y2
+            x_center = int((x1 + x2) / 2)
+            y_bottom = y2
+            t_x_center = int((t_x1+t_x2)/2)
+            t_y_bottom = t_y2
 
             color = [int(c) for c in COLORS[classIDs[i]]]
-            cv2.rectangle(transformed_frame, (t_x1, t_y1), (t_x2, t_y2), color, 2)
-            cv2.circle(transformed_frame, (x_center, y_bottom), 5, (0,0,255), -1)
+            cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
+            cv2.polylines(frame, [space], True, (0,255,0), 2)
+            cv2.circle(frame, (x_center, y_bottom), 5, (0, 0, 255), -1)
+            cv2.circle(transformed_frame, (t_x_center, t_y_bottom), 5, (0, 0, 255), -1)
             text = "{}: {:.4f}".format(LABELS[classIDs[i]], confidences[i])
-            cv2.putText(transformed_frame, text, (t_x1, t_y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
+            cv2.putText(frame, text, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
 
-    if writer is None:
+    if writer1 is None and writer2 is None:
         fourcc = cv2.VideoWriter_fourcc(*"MJPG")
-        writer = cv2.VideoWriter(args["output"], fourcc, 30, (frame.shape[1], frame.shape[0]), True)
+        writer1 = cv2.VideoWriter('output/{}_detect.avi'.format(filename), fourcc, 30, (frame.shape[1], frame.shape[0]), True)
+        writer2 = cv2.VideoWriter('output/{}_transform.avi'.format(filename), fourcc, 30, (frame.shape[1], frame.shape[0]), True)
 
         if total > 0:
             elap = (end - start)
             print("[INFO] single frame took {:.4f} seconds".format(elap))
             print("[INFO] estimated total time to finish: {:.4f}".format(elap * total))
 
-    writer.write(transformed_frame)
+    writer1.write(frame)
+    writer2.write(transformed_frame)
 
 print("[INFO] cleaning up...")
-writer.release()
+writer1.release()
+writer2.release()
 vs.release()
 print("[INFO] Finished!")
