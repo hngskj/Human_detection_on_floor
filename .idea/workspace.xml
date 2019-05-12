@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4d8ca60b-0cdf-4590-969b-61c89102a1ad" name="Default Changelist" comment="detection_trans">
-      <change afterPath="$PROJECT_DIR$/imgs2gif.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample_codes/images2gif.py" afterDir="false" />
+    <list default="true" id="4d8ca60b-0cdf-4590-969b-61c89102a1ad" name="Default Changelist" comment="upload gifs">
+      <change afterPath="$PROJECT_DIR$/gif/sample3_detect.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gif/sample3_transform.gif" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/yolo-coco/yolov3-spp.weights" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/yolo-coco/yolov3.weights" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/detection_transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/detection_transform.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/detection_yolov3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection_transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/human_detection_on_floor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/book.png" beforeDir="false" />
     </list>
     <list id="2d852cd6-be9f-4a20-b865-b54edb0bc22f" name="perspective transformation on video" comment="" />
     <list id="581797ff-ca41-4951-8b8b-f942611e36e6" name="Revert &quot;let's move on to video&quot;" comment="Revert &quot;let's move on to video&quot;&#10;&#10;This reverts commit c7f606e4" />
@@ -37,25 +39,13 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/detection_transform.py">
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/human_detection_on_floor.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="884">
-                    <caret line="171" column="85" selection-start-line="171" selection-start-column="85" selection-end-line="171" selection-end-column="85" />
+                  <state relative-caret-position="466">
+                    <caret line="158" column="57" lean-forward="true" selection-start-line="158" selection-start-column="57" selection-end-line="158" selection-end-column="57" />
                     <folding>
                       <element signature="e#103#121#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/imgs2gif.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="360">
-                    <caret line="15" column="87" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="87" />
-                    <folding>
-                      <element signature="e#1#15#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -69,10 +59,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/detection.py">
+        <entry file="file://$PROJECT_DIR$/detection_yolov3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+            <state relative-caret-position="648">
+              <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
               <folding>
                 <element signature="e#103#121#0" expanded="true" />
               </folding>
@@ -83,20 +73,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/get_coord_video.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
+            <state relative-caret-position="1512">
+              <caret line="63" column="13" lean-forward="true" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample_codes/images2gif.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="500" column="12" selection-start-line="500" selection-start-column="4" selection-end-line="500" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -166,11 +147,6 @@
               <item name="whereareyou" type="b2602c69:ProjectViewProjectNode" />
               <item name="whereareyou" type="462c0819:PsiDirectoryNode" />
               <item name="gif" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="whereareyou" type="b2602c69:ProjectViewProjectNode" />
-              <item name="whereareyou" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="whereareyou" type="b2602c69:ProjectViewProjectNode" />
@@ -246,7 +222,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detection_transform.py" />
+      <option name="SCRIPT_NAME" value="D:\Dropbox\__Projects\whereareyou\human_detection_on_floor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -368,7 +344,7 @@
       <workItem from="1557040807197" duration="6000" />
       <workItem from="1557040832964" duration="14168000" />
       <workItem from="1557058274822" duration="603000" />
-      <workItem from="1557058912510" duration="30004000" />
+      <workItem from="1557058912510" duration="32379000" />
     </task>
     <task id="LOCAL-00001" summary="get coord on floor">
       <created>1557046713761</created>
@@ -475,13 +451,41 @@
       <option name="project" value="LOCAL" />
       <updated>1557671468609</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="make gifs">
+      <created>1557674635613</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1557674635613</updated>
+    </task>
+    <task id="LOCAL-00017" summary="shape output size">
+      <created>1557674675702</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1557674675702</updated>
+    </task>
+    <task id="LOCAL-00018" summary="upload gifs">
+      <created>1557674733294</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1557674733294</updated>
+    </task>
+    <task id="LOCAL-00019" summary="upload gifs">
+      <created>1557675028601</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1557675028601</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44781000" />
+    <option name="totallyTimeSpent" value="47156000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -494,13 +498,13 @@
     <frame x="-1088" y="-113" width="1096" height="1936" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16505791" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16505791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32901752" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.13540511" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.13540511" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -602,7 +606,10 @@
     <MESSAGE value="tramsformation is done!" />
     <MESSAGE value="detection_transfrom FINISHED!" />
     <MESSAGE value="sample code from pyimagesearch" />
-    <option name="LAST_COMMIT_MESSAGE" value="sample code from pyimagesearch" />
+    <MESSAGE value="make gifs" />
+    <MESSAGE value="shape output size" />
+    <MESSAGE value="upload gifs" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload gifs" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Desktop/hngskj/yolo-object-detection/yolo_video.py">
@@ -640,7 +647,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detection.py">
+    <entry file="file://$PROJECT_DIR$/detection_yolov3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="89" column="57" selection-start-line="89" selection-start-column="57" selection-end-line="89" selection-end-column="57" />
@@ -704,16 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detection_transform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="171" column="85" selection-start-line="171" selection-start-column="85" selection-end-line="171" selection-end-column="85" />
-          <folding>
-            <element signature="e#103#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sample_codes/images2gif.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
@@ -721,32 +718,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/get_coord_video.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
+        <state relative-caret-position="1512">
+          <caret line="63" column="13" lean-forward="true" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detection.py">
+    <entry file="file://$PROJECT_DIR$/imgs2gif.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        <state relative-caret-position="72">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#1#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detection_yolov3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
           <folding>
             <element signature="e#103#121#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imgs2gif.py">
+    <entry file="file://$PROJECT_DIR$/human_detection_on_floor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="87" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="87" />
+        <state relative-caret-position="466">
+          <caret line="158" column="57" lean-forward="true" selection-start-line="158" selection-start-column="57" selection-end-line="158" selection-end-column="57" />
           <folding>
-            <element signature="e#1#15#0" expanded="true" />
+            <element signature="e#103#121#0" expanded="true" />
           </folding>
         </state>
       </provider>
