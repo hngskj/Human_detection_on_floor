@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d8ca60b-0cdf-4590-969b-61c89102a1ad" name="Default Changelist" comment="detection_trans">
+      <change afterPath="$PROJECT_DIR$/imgs2gif.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sample_codes/images2gif.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/yolo-coco/yolov3-spp.weights" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/yolo-coco/yolov3.weights" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detection_transform.py" beforeDir="false" afterPath="$PROJECT_DIR$/detection_transform.py" afterDir="false" />
     </list>
     <list id="2d852cd6-be9f-4a20-b865-b54edb0bc22f" name="perspective transformation on video" comment="" />
     <list id="581797ff-ca41-4951-8b8b-f942611e36e6" name="Revert &quot;let's move on to video&quot;" comment="Revert &quot;let's move on to video&quot;&#10;&#10;This reverts commit c7f606e4" />
@@ -26,6 +29,7 @@
     <SUITE FILE_PATH="coverage/whereareyou$coordinates.coverage" NAME="coordinates Coverage Results" MODIFIED="1557041449141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/whereareyou$get_coord_image.coverage" NAME="get_coord_image Coverage Results" MODIFIED="1557668276994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/whereareyou$homography.coverage" NAME="homography Coverage Results" MODIFIED="1557045934952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sample_codes" />
+    <SUITE FILE_PATH="coverage/whereareyou$imgs2gif.coverage" NAME="imgs2gif Coverage Results" MODIFIED="1557674419759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/whereareyou$perspective_transform__1_.coverage" NAME="perspective_transform (1) Coverage Results" MODIFIED="1557046468592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sample_codes" />
   </component>
   <component name="DockManager">
@@ -33,13 +37,25 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file pinned="false" current-in-tab="true">
+            <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/detection_transform.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="744">
-                    <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+                  <state relative-caret-position="884">
+                    <caret line="171" column="85" selection-start-line="171" selection-start-column="85" selection-end-line="171" selection-end-column="85" />
                     <folding>
                       <element signature="e#103#121#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/imgs2gif.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="360">
+                    <caret line="15" column="87" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="87" />
+                    <folding>
+                      <element signature="e#1#15#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -52,44 +68,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/detection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="342">
+              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
               <folding>
                 <element signature="e#103#121#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/get_coord_image.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="51" column="16" lean-forward="true" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample_codes/perspective_transform.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-              <folding>
-                <element signature="e#37#55#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../__Research/object-tracking-dlib/track_object.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-72">
-              <caret line="83" column="34" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -106,6 +92,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample_codes/images2gif.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="500" column="12" selection-start-line="500" selection-start-column="4" selection-end-line="500" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -118,6 +113,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>16</find>
+      <find>writer</find>
+      <find>writeGif</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,8 +136,10 @@
         <option value="$PROJECT_DIR$/detection1.py" />
         <option value="$PROJECT_DIR$/detection.py" />
         <option value="$PROJECT_DIR$/get_coord_video.py" />
-        <option value="$PROJECT_DIR$/detection_transform.py" />
         <option value="$PROJECT_DIR$/get_coord_image.py" />
+        <option value="$PROJECT_DIR$/sample_codes/track_object.py" />
+        <option value="$PROJECT_DIR$/detection_transform.py" />
+        <option value="$PROJECT_DIR$/imgs2gif.py" />
       </list>
     </option>
   </component>
@@ -162,6 +161,11 @@
             <path>
               <item name="whereareyou" type="b2602c69:ProjectViewProjectNode" />
               <item name="whereareyou" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="whereareyou" type="b2602c69:ProjectViewProjectNode" />
+              <item name="whereareyou" type="462c0819:PsiDirectoryNode" />
+              <item name="gif" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="whereareyou" type="b2602c69:ProjectViewProjectNode" />
@@ -209,6 +213,7 @@
       <recent name="D:\Dropbox\__Projects\whereareyou\yolo-coco" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Dropbox\__Projects\whereareyou\gif" />
       <recent name="D:\Dropbox\__Projects\whereareyou\yolo-coco" />
       <recent name="D:\Dropbox\__Projects\whereareyou" />
       <recent name="D:\Dropbox\__Projects\whereareyou\sample_codes" />
@@ -227,7 +232,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.get_coord_image">
+  <component name="RunManager" selected="Python.imgs2gif">
     <configuration name="detection_transform" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="whereareyou" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -316,7 +321,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="perspective_transform (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="imgs2gif" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="whereareyou" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -324,12 +329,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sample_codes" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\Dropbox\__Projects\whereareyou\get_coord_image.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/imgs2gif.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -340,11 +345,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.imgs2gif" />
         <item itemvalue="Python.get_coord_image" />
         <item itemvalue="Python.detection_transform" />
         <item itemvalue="Python.get_coord_video" />
         <item itemvalue="Python.get_coord" />
-        <item itemvalue="Python.perspective_transform (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -363,7 +368,7 @@
       <workItem from="1557040807197" duration="6000" />
       <workItem from="1557040832964" duration="14168000" />
       <workItem from="1557058274822" duration="603000" />
-      <workItem from="1557058912510" duration="26843000" />
+      <workItem from="1557058912510" duration="30004000" />
     </task>
     <task id="LOCAL-00001" summary="get coord on floor">
       <created>1557046713761</created>
@@ -463,11 +468,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557670418289</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="sample code from pyimagesearch">
+      <created>1557671468609</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1557671468609</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41620000" />
+    <option name="totallyTimeSpent" value="44781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,7 +601,8 @@
     <MESSAGE value="human detection and perspective transformation on video" />
     <MESSAGE value="tramsformation is done!" />
     <MESSAGE value="detection_transfrom FINISHED!" />
-    <option name="LAST_COMMIT_MESSAGE" value="detection_transfrom FINISHED!" />
+    <MESSAGE value="sample code from pyimagesearch" />
+    <option name="LAST_COMMIT_MESSAGE" value="sample code from pyimagesearch" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Desktop/hngskj/yolo-object-detection/yolo_video.py">
@@ -657,20 +670,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_coord_video.py">
+    <entry file="file://$PROJECT_DIR$/../../__Research/object-tracking-dlib/track_object.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="288">
+          <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../__Research/object-tracking-dlib/track_object.py">
+    <entry file="file://$PROJECT_DIR$/sample_codes/track_object.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="83" column="34" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
+        <state relative-caret-position="672">
+          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding>
+            <element signature="e#251#280#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -684,16 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="e#103#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/get_coord_image.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1200">
@@ -703,10 +706,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/detection_transform.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="884">
+          <caret line="171" column="85" selection-start-line="171" selection-start-column="85" selection-end-line="171" selection-end-column="85" />
           <folding>
             <element signature="e#103#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample_codes/images2gif.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="500" column="12" selection-start-line="500" selection-start-column="4" selection-end-line="500" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_coord_video.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1104">
+          <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+          <folding>
+            <element signature="e#103#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imgs2gif.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="87" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="87" />
+          <folding>
+            <element signature="e#1#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
