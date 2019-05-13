@@ -7,10 +7,10 @@ C:/Users/hello> python detection_transform.py --input videos/sample3.mp4
 ```
 
 ### Object detection w/ yolov3
-[![Object detection](https://img.youtube.com/vi/VKEDU4FXoEw/0.jpg)](https://www.youtube.com/watch?v=VKEDU4FXoEw)
+[![Object detection](https://img.youtube.com/vi/ZggRDzwvX-8/0.jpg)](https://www.youtube.com/watch?v=ZggRDzwvX-8)
 
 ### Perspective transformation using Green box above
-[![Perspective transform](https://img.youtube.com/vi/u0aAskJZ1t8/0.jpg)](https://www.youtube.com/watch?v=u0aAskJZ1t8)
+[![Perspective transform](https://img.youtube.com/vi/j56KZmh00NA/0.jpg)](https://www.youtube.com/watch?v=j56KZmh00NA)
 
 
 
