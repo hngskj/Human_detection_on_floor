@@ -3,7 +3,7 @@
 
 Usage
 ```console
-C:/Users/hello> python detection_transform.py --input videos/sample3.mp4
+C:/Users/hello> python human_detection_on_floor.py --input videos/sample3.mp4
 ```
 
 ### Object detection w/ yolov3
